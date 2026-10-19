@@ -1,10 +1,8 @@
 name: CI
 
+# pull_request only (this fork): a push ran the same suite again on every
+# branch a pull request already covered. Upstream commits are tested upstream.
 on:
-  push:
-    paths-ignore:
-      - "docs/**"
-      - "plans/**"
   pull_request:
     paths-ignore:
       - "docs/**"
